@@ -26,6 +26,14 @@ echo " "
 
 sudo apt-get update -y
 
+
+echo " "
+echo "########################"
+echo "INSTALLING Git          "
+echo "########################"
+echo " "
+sudo apt-get install git
+
 echo " "
 echo "########################"
 echo "INSTALLING APACHE SERVER"
@@ -76,9 +84,8 @@ echo "#####################"
 echo " "
 
 sudo apt-get install phpmyadmin apache2-utils -y
-
-
-echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
+#echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
+git clone https://github.com/phpmyadmin/phpmyadmin /var/www/html/phpmyadmin
 
 echo " "
 echo "###########################"
