@@ -40,7 +40,19 @@ echo "##############"
 echo "INSTALLING PHP"
 echo "##############"
 echo " "
-sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.0
+
+echo " "
+echo "##############"
+echo "INSTALLING PHP Important Extensions"
+echo "##############"
+echo " "
+
+sudo apt-get install php7.0-mbstring
+sudo apt-get install php7.0-mcrypt
+sudo apt-get install php7.0-curl
 
 
 
@@ -49,7 +61,9 @@ echo "#########################"
 echo "INSTALLING MYSQL DATABASE"
 echo "#########################"
 echo " "
-sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql -y
+sudo apt-get install mysql-server libapache2-mod-auth-mysql -y
+
+sudo sudo apt-get install php7.0-mysql -y
 
 sudo mysql_install_db
 
