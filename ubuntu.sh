@@ -87,7 +87,7 @@ echo "#####################"
 echo " "
 
 sudo apt-get install phpmyadmin apache2-utils -y
-echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
+#echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
 
 echo " "
 echo "###########################"
