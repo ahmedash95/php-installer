@@ -66,7 +66,7 @@ echo "#########################"
 echo "INSTALLING MYSQL DATABASE"
 echo "#########################"
 echo " "
-sudo apt-get install mysql-server libapache2-mod-auth-mysql -y
+sudo apt-get install mysql-server  -y
 
 sudo sudo apt-get install php7.0-mysql -y
 
@@ -81,7 +81,8 @@ echo "#####################"
 echo " "
 
 sudo apt-get install phpmyadmin apache2-utils -y
-#echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
+sudo echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
+sudo apt-get install libapache2-mod-php -y
 
 echo " "
 echo "###########################"
