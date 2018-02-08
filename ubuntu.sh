@@ -36,11 +36,11 @@ sudo apt-get install git -y
 
 echo " "
 echo "########################"
-echo "INSTALLING APACHE SERVER"
+echo "INSTALLING NGINX SERVER"
 echo "########################"
 echo " "
 
-sudo apt-get install apache2 -y 
+sudo apt-get install nginx -y 
 
 
 echo " "
@@ -48,9 +48,7 @@ echo "##############"
 echo "INSTALLING PHP"
 echo "##############"
 echo " "
-sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
-sudo apt-get install php7.0
+sudo apt-get install php -y
 
 echo " "
 echo "##############"
@@ -58,40 +56,7 @@ echo "INSTALLING PHP Important Extensions"
 echo "##############"
 echo " "
 
-sudo apt-get install php7.0-mcrypt php7.0-curl php7.0-zip php7.0-dom php7.0-gd php7.0-intl php7.0-mbstring -y --force-yes
-
-
-echo " "
-echo "#########################"
-echo "INSTALLING MYSQL DATABASE"
-echo "#########################"
-echo " "
-sudo apt-get install mysql-server  -y
-
-sudo sudo apt-get install php7.0-mysql -y
-
-sudo mysql_install_db
-
-sudo /usr/bin/mysql_secure_installation
-
-echo " "
-echo "#####################"
-echo "INSTALLING PHPMYADMIN"
-echo "#####################"
-echo " "
-
-sudo apt-get install phpmyadmin apache2-utils -y
-sudo echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
-sudo apt-get install libapache2-mod-php -y
-
-echo " "
-echo "###########################"
-echo "Enable Apache Rewrite Mode"
-echo "###########################"
-echo " "
-
-sudo a2enmod rewrite
-
+sudo apt-get install php-mcrypt php-curl php-zip php-gd php-intl php-mbstring -y --force-yes
 
 echo " "
 echo "#################"
@@ -99,7 +64,7 @@ echo "RESTARTING APACHE"
 echo "#################"
 echo " "
 
-sudo service apache2 restart
+sudo service nginx restart
 
 
 
